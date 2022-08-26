@@ -34,8 +34,8 @@ public class Ejercicio_6 {
     //metodo para el calculo del pocentajes
     public void Porcentajes() {
 
-        phombre = (hombres / EstudiantesTotal()) * 100;
-        pmujeres = (mujeres / EstudiantesTotal()) * 100;
+        phombre = (hombres / EstudiantesTotal()) * CIEN;
+        pmujeres = (mujeres / EstudiantesTotal()) * CIEN;
 
     }
 
@@ -48,15 +48,6 @@ public class Ejercicio_6 {
         System.out.println("===============================================");
         System.out.println("================FIN DEL PROGRAMA===============");
         System.out.println("===============================================");
-    }
-    
-    //Metodo main
-    public static void main(String[] args) {
-        Ejercicio_6 ejercicio = new Ejercicio_6();
-        ejercicio.SolicitarDatos();
-        ejercicio.EstudiantesTotal();
-        ejercicio.Porcentajes();
-        ejercicio.MostrarResultados();
     }
 
 }
