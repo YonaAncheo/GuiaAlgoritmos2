@@ -8,15 +8,7 @@ public class Ejercicio_8 {
 //monto a percibir. Ingresar el sueldo base actual, calcular y
 //mostrar el nuevo monto que ganará el trabajador.    
 
-    Scanner in = new Scanner(System.in);
-
-    //metodo para solicitar datos
-    public float SolicitarSueldo() {
-        float sueldoIgresado;
-        System.out.println("Ingrese su sueldo: ");
-        sueldoIgresado = in.nextFloat();
-        return sueldoIgresado;
-    }
+    static Scanner in = new Scanner(System.in);
 
     //metodo para realizar el incremento del sueldo
     public float CalculoSueldo(float a) {
@@ -29,17 +21,19 @@ public class Ejercicio_8 {
     //metodo para mostrar resultados
     public void MostrarResultados(float b) {
 
-        System.out.println("Al aumentar el sueldo en un 25%, el nuevo sueldo sera: " + b);
+        System.out.println("Al aumentar el sueldo en un 25%, el nuevo sueldo sera: " + CalculoSueldo(b) );
     }
 
     public static void main(String[] args) {
 
         //entrada solicitada al usuario
         float sueldo;
+        System.out.println("Ingresa el sueldo: ");
+        sueldo = in.nextFloat();
         Ejercicio_8 robot = new Ejercicio_8();
 
-        sueldo = robot.SolicitarSueldo();
-        robot.MostrarResultados(robot.CalculoSueldo(sueldo));
+        
+        robot.MostrarResultados(sueldo);
 
     }
 
